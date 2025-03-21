@@ -1,11 +1,12 @@
-- # 创建 wrangler.jsonc 文件（与 package.json 同级）
-+ // 静态网站部署配置
+// wrangler.jsonc
 {
   "name": "yourgame",
   "compatibility_date": "2025-03-21",
   "assets": {
     "directory": "./dist",
     "include": ["**/*"],
-    "exclude": ["**/*.map"]
-  }
+    "exclude": ["**/*.map"],
+    "serve_single_page_app": true  // 针对 SPA 的配置
+  },
+  "kv_namespaces": []  // 可选：绑定 Workers KV
 }
