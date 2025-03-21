@@ -1,0 +1,10 @@
+# 创建 wrangler.jsonc 文件（与 package.json 同级）
+{
+  "name": "yourgame",
+  "compatibility_date": "2025-03-21",
+  "assets": {
+    "directory": "./dist",
+    "include": ["**/*"],
+    "exclude": ["**/*.map"]
+  }
+}
