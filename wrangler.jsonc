@@ -1,4 +1,5 @@
-# 创建 wrangler.jsonc 文件（与 package.json 同级）
+- # 创建 wrangler.jsonc 文件（与 package.json 同级）
++ // 静态网站部署配置
 {
   "name": "yourgame",
   "compatibility_date": "2025-03-21",
