@@ -3,7 +3,7 @@ import { GameCard } from '../components/GameCard';
 import { games } from '../data/games';
 import { Sparkles } from 'lucide-react';
 
-export function Home() {
+function Home() {
   const featuredGames = games.filter(game => game.featured);
   const regularGames = games.filter(game => !game.featured);
 
@@ -14,7 +14,7 @@ export function Home() {
           <Sparkles className="w-6 h-6 text-yellow-500" />
           <h2 className="text-2xl font-bold text-white">Featured Games</h2>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {featuredGames.map(game => (
             <GameCard key={game.id} game={game} />
           ))}
@@ -23,7 +23,7 @@ export function Home() {
 
       <section>
         <h2 className="text-2xl font-bold text-white mb-4">All Games</h2>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {regularGames.map(game => (
             <GameCard key={game.id} game={game} />
           ))}
@@ -32,3 +32,5 @@ export function Home() {
     </div>
   );
 }
+
+export default Home;

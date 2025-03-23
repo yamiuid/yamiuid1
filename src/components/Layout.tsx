@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Gamepad2, Github } from 'lucide-react';
+import { Gamepad2, Github, Menu, X } from 'lucide-react';
 import { categories } from '../data/games';
 import * as Icons from 'lucide-react';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const iconComponents: { [key: string]: React.ComponentType } = Icons;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -22,18 +23,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
+                className="text-gray-300 hover:text-white hidden sm:block"
               >
                 <Github className="w-6 h-6" />
               </a>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-300 hover:text-white sm:hidden"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-8">
+          <div className={`sm:col-span-2 ${isMobileMenuOpen ? 'block' : 'hidden sm:block'}`}>
             <nav className="space-y-2">
               {categories.map((category) => {
                 const IconComponent = iconComponents[category.icon];
@@ -46,6 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         ? 'bg-purple-500 text-white'
                         : 'text-gray-300 hover:bg-gray-800'
                     }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <IconComponent className="w-5 h-5" />
                     <span>{category.name}</span>
@@ -54,7 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               })}
             </nav>
           </div>
-          <main className="col-span-10">
+          <main className="sm:col-span-10">
             {children}
           </main>
         </div>
