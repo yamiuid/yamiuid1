@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Gamepad2, Github, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { categories } from '../data/games';
 import * as Icons from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  const iconComponents: { [key: string]: React.ComponentType } = Icons;
+  const iconComponents = Icons as any;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const renderIcon = (iconName: string) => {
+    const IconComponent = iconComponents[iconName];
+    
+    if (IconComponent) {
+      return <IconComponent className="w-5 h-5" />;
+    } else {
+      return <img src="/favicon.svg" alt="icon" className="w-5 h-5" />;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -15,18 +26,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-3">
-              <Gamepad2 className="w-8 h-8 text-purple-500" />
+              <Logo className="w-8 h-8" />
               <span className="text-2xl font-bold text-white">YourGame</span>
             </Link>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white hidden sm:block"
-              >
-                <Github className="w-6 h-6" />
-              </a>
+            <div className="flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-gray-300 hover:text-white sm:hidden"

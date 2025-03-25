@@ -1,6 +1,7 @@
 import { Game, Category } from '../types';
 
 export const categories: Category[] = [
+  { id: 'best', name: 'Best', icon: 'ThumbsUp' },
   { id: 'action', name: 'Action', icon: 'Sword' },
   { id: 'racing', name: 'Racing', icon: 'Car' },
   { id: 'puzzle', name: 'Puzzle', icon: 'Brain' },
@@ -9,9 +10,67 @@ export const categories: Category[] = [
 ];
 
 export const games: Game[] = [
-  // Action Games
+  // Best Games
   {
-    id: 'monster-survivors',
+    id: 'OmNomRun',
+    title: 'Om Nom Run',
+    description: 'Run alongside Om Nom in his famous adventure',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/OmNomRunTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/om-nom-run',
+    featured: true
+  },
+  {
+    id: 'GardenBloom',
+    title: 'Garden Bloom',
+    description: 'Match at least 3 flowers of the same color to get flowertastic results!The more you can merge, the more powerful the effect will be!',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GardenBloomTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/garden-bloom',
+    featured: true
+  },
+  {
+    id: 'BubbleTower3D',
+    title: 'Bubble Tower 3D',
+    description: 'If you are a friend of oldschool bubbleshooters then you will love Bubble Tower 3D',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/bubble-tower-3d',
+    featured: false
+  },
+
+  {
+    id: 'CannonBalls-3D',
+    title: 'Cannon Balls 3D',
+    description: 'Try to be the master of destruction, heat up the buildings neatly and show no mercy!',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/CannonBalls3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/cannon-balls-3d',
+    featured: false
+  },
+  {
+    id: 'TowerCrash-3D',
+    title: 'Tower Crash 3D',
+    description: 'Crash the Tower! Only the best crashers will be able to destroy alltowers in this 3D physics game',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/TowerCrash3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/tower-crash-3d',
+    featured: false
+  },
+
+  {
+    id: 'ElementBlocks',
+    title: 'Element Blocks',
+    description: 'Weather the elements in this crazy addictive puzzle game!',
+    category: 'best',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/element-blocks',
+    featured: false
+  },
+  
+   // Action Games
+   {
+    id: 'monster-survivors-action',
     title: 'Monster Survivors',
     description: 'Survive waves of monsters in this action-packed game!',
     category: 'action',
@@ -25,8 +84,8 @@ export const games: Game[] = [
     description: 'Master the art of stealth and combat in this action adventure.',
     category: 'action',
     imageUrl: 'https://images.unsplash.com/photo-1559080463-5c7eb3a52de1?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
-    featured: false
+    gameUrl: 'https://play.famobi.com/train-miner',
+    featured: true
   },
   {
     id: 'dragon-quest',
@@ -34,7 +93,7 @@ export const games: Game[] = [
     description: 'Embark on an epic journey to defeat powerful dragons.',
     category: 'action',
     imageUrl: 'https://images.unsplash.com/photo-1577083288073-40892c0860a4?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    gameUrl: 'https://play.famobi.com/rise-up',
     featured: false
   },
 
@@ -69,32 +128,62 @@ export const games: Game[] = [
 
   // Puzzle Games
   {
-    id: 'mind-bender',
-    title: 'Mind Bender',
-    description: 'Challenge your brain with intricate puzzles.',
+    id: 'Go-Escape',
+    title: 'Go Escape',
+    description: 'Dodge, jump, and escape in Go Escape - the ultimate test of skill and reflexes! ',
     category: 'puzzle',
-    imageUrl: 'https://images.unsplash.com/photo-1509909756405-be0199881695?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GoEscapeTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/go-escape',
     featured: true
   },
   {
-    id: 'color-match',
-    title: 'Color Match',
-    description: 'Match colors and solve puzzles in this relaxing game.',
+    id: 'ColorFill-3D',
+    title: 'Color Fill 3D',
+    description: 'In Color Fill 3D, your objective is to fill the entire grid with color by moving a block across the empty spaces.',
     category: 'puzzle',
-    imageUrl: 'https://images.unsplash.com/photo-1527066579998-dbbae57f45ce?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorFill3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/color-fill-3d',
     featured: false
   },
   {
-    id: 'cube-master',
-    title: 'Cube Master',
-    description: 'Rotate and solve 3D cube puzzles.',
+    id: 'Spot-the-Cat',
+    title: 'Spot the Cat',
+    description: 'Discover hidden objects in Spot the Cat - a whimsical search-and-find puzzle game!',
     category: 'puzzle',
-    imageUrl: 'https://images.unsplash.com/photo-1575364289437-fb1479d52732?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/SpotTheCatTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/spot-the-cat',
     featured: false
   },
+  {
+    id: 'ColorRoll-3D',
+    title: 'Color Roll 3D',
+    description: 'Unroll your way to victory in Color Roll 3D - the ultimate 3D puzzle challenge!',
+    category: 'puzzle',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorRoll3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/color-roll-3d',
+    featured: false
+  },
+  {
+    id: 'ColorWaterSort-3D',
+    title: 'Color Water Sort 3D',
+    description: 'Dive into the colorful challenge of Color Water Sort 3D - where strategy meets vibrant fun! ',
+    category: 'puzzle',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorWaterSort3dTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/color-water-sort-3d',
+    featured: false
+  },
+  {
+    id: 'Braindom',
+    title: 'Braindom',
+    description: 'Challenge your mind and learn history with Braindom - the ultimate puzzle-packed brain teaser! ',
+    category: 'puzzle',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/BraindomTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/braindom',
+    featured: false
+  },
+
+
+
 
   // Shooter Games
   {
