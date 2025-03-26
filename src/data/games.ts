@@ -2,10 +2,11 @@ import { Game, Category } from '../types';
 
 export const categories: Category[] = [
   { id: 'best', name: 'Best', icon: 'ThumbsUp' },
-  { id: 'action', name: 'Action', icon: 'Sword' },
+  { id: 'arcade', name: 'Arcade', icon: 'Rocket' },
+  { id: 'bubble shooter', name: 'Bubble Shooter', icon: 'CircleDot' },
   { id: 'racing', name: 'Racing', icon: 'Car' },
   { id: 'puzzle', name: 'Puzzle', icon: 'Brain' },
-  { id: 'shooter', name: 'Shooter', icon: 'Crosshair' },
+  { id: 'cards', name: 'Cards', icon: 'Club' },
   { id: 'all', name: 'All Games', icon: 'Gamepad2' },
 ];
 
@@ -17,7 +18,7 @@ export const games: Game[] = [
     description: 'Run alongside Om Nom in his famous adventure',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/OmNomRunTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/om-nom-run',
+    gameUrl: 'https://play.famobi.com/om-nom-run/A1000-10',
     featured: true
   },
   {
@@ -26,7 +27,7 @@ export const games: Game[] = [
     description: 'Match at least 3 flowers of the same color to get flowertastic results!The more you can merge, the more powerful the effect will be!',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GardenBloomTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/garden-bloom',
+    gameUrl: 'https://play.famobi.com/garden-bloom/A1000-10',
     featured: true
   },
   {
@@ -35,7 +36,7 @@ export const games: Game[] = [
     description: 'If you are a friend of oldschool bubbleshooters then you will love Bubble Tower 3D',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/bubble-tower-3d',
+    gameUrl: 'https://play.famobi.com/bubble-tower-3d/A1000-10',
     featured: false
   },
 
@@ -45,7 +46,7 @@ export const games: Game[] = [
     description: 'Try to be the master of destruction, heat up the buildings neatly and show no mercy!',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/CannonBalls3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/cannon-balls-3d',
+    gameUrl: 'https://play.famobi.com/cannon-balls-3d/A1000-10',
     featured: false
   },
   {
@@ -54,7 +55,7 @@ export const games: Game[] = [
     description: 'Crash the Tower! Only the best crashers will be able to destroy alltowers in this 3D physics game',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/TowerCrash3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/tower-crash-3d',
+    gameUrl: 'https://play.famobi.com/tower-crash-3d/A1000-10',
     featured: false
   },
 
@@ -64,65 +65,162 @@ export const games: Game[] = [
     description: 'Weather the elements in this crazy addictive puzzle game!',
     category: 'best',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/element-blocks',
+    gameUrl: 'https://play.famobi.com/element-blocks/A1000-10',
     featured: false
   },
   
-   // Action Games
+ // Arcade Games
+ {
+  id: 'TrainMiner',
+  title: 'Train Miner',
+  description: 'All aboard for endless mining fun in Train Miner – expand, upgrade, and dominate the tracks! ',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/TrainMinerTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/wrapper/train-miner/A1000-10',
+  featured: true
+},
+{
+  id: 'RiseUp',
+  title: 'Rise Up',
+  description: 'Protect, dodge, and rise to the top in Rise Up , the ultimate survival challenge!',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/RiseUpTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/wrapper/rise-up/A1000-10',
+  featured: true
+},
+{
+  id: 'GiantRush',
+  title: 'Giant Rush',
+  description: 'Run, merge, and battle giants in Giant Rush – the ultimate action-packed adventure!',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GiantRushTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/wrapper/giant-rush/A1000-10',
+  featured: false
+},
+
+{
+  id: 'FruitParty',
+  title: 'Fruit Party',
+  description: 'Merge and grow your fruits to score big in Fruit Party - the ultimate basket-dropping challenge! ',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/FruitPartyTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/fruit-party/A1000-10',
+  featured: false
+},
+{
+  id: 'AlienAttack',
+  title: 'Alien Attack',
+  description: 'Blast off and dominate the cosmos in Alien Attack - the ultimate 2D spaceship shooter!',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/AlienAttackTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/alien-attack/A1000-10',
+  featured: false
+},
+
+{
+  id: 'Block Painter',
+  title: 'Block Painter',
+  description: 'Master colorful challenges in Block Painter – the ultimate bridge-building adventure! ',
+  category: 'arcade',
+  imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/BlockPainterTeaser.jpg?v=0.2-e9a56fac',
+  gameUrl: 'https://play.famobi.com/block-painter/A1000-10',
+  featured: false
+},
+
+
+
+
+   // bubble shooter Games
    {
-    id: 'monster-survivors-action',
-    title: 'Monster Survivors',
-    description: 'Survive waves of monsters in this action-packed game!',
-    category: 'action',
-    imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop',
-    gameUrl: 'https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html',
+    id: 'OmNomBubbles',
+    title: 'Om Nom Bubbles',
+    description: 'Get ready for the new challenging adventure Om Nom Bubbles and help him shoot all those tasty candies!',
+    category: 'bubble shooter',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/OmNomBubblesTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/om-nom-bubbles/A1000-10',
     featured: true
   },
   {
-    id: 'ninja-warrior',
-    title: 'Ninja Warrior',
-    description: 'Master the art of stealth and combat in this action adventure.',
-    category: 'action',
-    imageUrl: 'https://images.unsplash.com/photo-1559080463-5c7eb3a52de1?w=800&auto=format&fit=crop',
-    gameUrl: 'https://play.famobi.com/train-miner',
+    id: 'SmartyBubbles-2',
+    title: 'Smarty Bubbles 2',
+    description: 'nother part of the popular and most successful Bubble Shooter for the whole family goes into round 2, now even prettier! ',
+    category: 'bubble shooter',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/SmartyBubbles2Teaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/smarty-bubbles-2/A1000-10',
     featured: true
   },
   {
-    id: 'dragon-quest',
-    title: 'Dragon Quest',
-    description: 'Embark on an epic journey to defeat powerful dragons.',
-    category: 'action',
-    imageUrl: 'https://images.unsplash.com/photo-1577083288073-40892c0860a4?w=800&auto=format&fit=crop',
-    gameUrl: 'https://play.famobi.com/rise-up',
+    id: 'Fuzzies',
+    title: 'Fuzzies',
+    description: 'Once upon a time, the colorful and cuddly Fuzzies lived happily together in their village. ',
+    category: 'bubble shooter',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/FuzziesTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/fuzzies/A1000-10',
     featured: false
   },
 
   // Racing Games
   {
-    id: 'racing-thunder',
-    title: 'Racing Thunder',
-    description: 'Experience high-speed racing action!',
+    id: 'DragRacingClub',
+    title: 'Drag Racing Club',
+    description: 'Get into your car and explore the exciting world of street drag racing!',
     category: 'racing',
-    imageUrl: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?w=800&auto=format&fit=crop',
-    gameUrl: 'https://liferestart.syaro.io/public/index.html',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/DragRacingClubTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/drag-racing-club/A1000-10',
     featured: true
   },
   {
-    id: 'drift-kings',
-    title: 'Drift Kings',
-    description: 'Master the art of drifting in this intense racing game.',
+    id: 'MotoFury',
+    title: 'Moto Fury',
+    description: 'Hop on your motorcycle and drive as long and fast as you can without crashing!',
     category: 'racing',
-    imageUrl: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/MotoFuryTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/moto-fury/A1000-10',
     featured: false
   },
   {
-    id: 'speed-demons',
-    title: 'Speed Demons',
-    description: 'Push your limits in this high-octane racing experience.',
+    id: 'Moto-X3M',
+    title: 'Moto X3M',
+    description: 'Get on your motorbike and try to beat 25 challenging levels as fast as you can.',
     category: 'racing',
-    imageUrl: 'https://images.unsplash.com/photo-1543465077-db45d34b88a5?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/MotoX3mTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/moto-x3m/A1000-10',
+    featured: false
+  },
+  {
+    id: 'DriftDudes',
+    title: 'Moto X3M',
+    description: 'Burn the rubber on the asphalt and drift your way through the finish line in this awesome new mutliplayer racing game, Drift Dudes! ',
+    category: 'racing',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/DriftDudesTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/drift-dudes/A1000-10',
+    featured: false
+  },
+  {
+    id: 'RacingMonsterTrucks',
+    title: 'Racing Monster Trucks',
+    description: 'Rev up your engine and leave your competitors in the dust in this thrilling monster truck racing game!',
+    category: 'racing',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/RacingMonsterTrucksTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/drift-dudes/A1000-10',
+    featured: false
+  },
+  {
+    id: 'HighwayRiderExtreme',
+    title: 'Highway Rider Extreme',
+    description: 'Put on a helmet and ride your motorbike in this super fast-paced racing game! ',
+    category: 'racing',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/HighwayRiderExtremeTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/highway-rider-extreme/A1000-10',
+    featured: false
+  },
+  {
+    id: 'HexGL',
+    title: 'HexGL',
+    description: 'HexGL is a fast-paced racing game. Players can use a keyboard, touchscreen devices, or Leap Motion (motion controller) to control a spaceship',
+    category: 'racing',
+    imageUrl: 'https://image-static.segmentfault.com/260/768/2607682912-5eca2401a1b66_fix732',
+    gameUrl: 'https://hexgl.bkcore.com/play//A1000-10',
     featured: false
   },
 
@@ -133,7 +231,7 @@ export const games: Game[] = [
     description: 'Dodge, jump, and escape in Go Escape - the ultimate test of skill and reflexes! ',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GoEscapeTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/go-escape',
+    gameUrl: 'https://play.famobi.com/go-escape/A1000-10',
     featured: true
   },
   {
@@ -142,7 +240,7 @@ export const games: Game[] = [
     description: 'In Color Fill 3D, your objective is to fill the entire grid with color by moving a block across the empty spaces.',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorFill3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/color-fill-3d',
+    gameUrl: 'https://play.famobi.com/color-fill-3d/A1000-10',
     featured: false
   },
   {
@@ -151,7 +249,7 @@ export const games: Game[] = [
     description: 'Discover hidden objects in Spot the Cat - a whimsical search-and-find puzzle game!',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/SpotTheCatTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/spot-the-cat',
+    gameUrl: 'https://play.famobi.com/spot-the-cat/A1000-10',
     featured: false
   },
   {
@@ -160,7 +258,7 @@ export const games: Game[] = [
     description: 'Unroll your way to victory in Color Roll 3D - the ultimate 3D puzzle challenge!',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorRoll3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/color-roll-3d',
+    gameUrl: 'https://play.famobi.com/color-roll-3d/A1000-10',
     featured: false
   },
   {
@@ -169,7 +267,7 @@ export const games: Game[] = [
     description: 'Dive into the colorful challenge of Color Water Sort 3D - where strategy meets vibrant fun! ',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorWaterSort3dTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/color-water-sort-3d',
+    gameUrl: 'https://play.famobi.com/color-water-sort-3d/A1000-10',
     featured: false
   },
   {
@@ -178,39 +276,39 @@ export const games: Game[] = [
     description: 'Challenge your mind and learn history with Braindom - the ultimate puzzle-packed brain teaser! ',
     category: 'puzzle',
     imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/BraindomTeaser.jpg?v=0.2-e9a56fac',
-    gameUrl: 'https://play.famobi.com/braindom',
+    gameUrl: 'https://play.famobi.com/braindom/A1000-10',
     featured: false
   },
 
 
 
 
-  // Shooter Games
+  // card Games
   {
-    id: 'cyber-assault',
-    title: 'Cyber Assault',
-    description: 'Fight in futuristic battles with advanced weapons.',
-    category: 'shooter',
-    imageUrl: 'https://images.unsplash.com/photo-1542751110-97427bbecf20?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    id: 'Crossover-21',
+    title: 'Crossover 21',
+    description: 'In Crossover 21 you tactically need to match the cards smart in order to achieve the magic "21" both vertical and horizontal.',
+    category: 'cards',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/Crossover21Teaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/crossover-21/A1000-10',
     featured: true
   },
   {
-    id: 'space-warriors',
-    title: 'Space Warriors',
-    description: 'Defend the galaxy in this epic space shooter.',
-    category: 'shooter',
-    imageUrl: 'https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    id: 'PirateCards',
+    title: 'Pirate Cards',
+    description: 'In this rogue-like card game you play as a brave pirate captain exploring a far-away island full of dangers and treasures.',
+    category: 'cards',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/PirateCardsTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/pirate-cards/A1000-10',
     featured: false
   },
   {
-    id: 'zombie-survival',
-    title: 'Zombie Survival',
-    description: 'Survive the zombie apocalypse with limited resources.',
-    category: 'shooter',
-    imageUrl: 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=800&auto=format&fit=crop',
-    gameUrl: 'https://placeholder.com/game',
+    id: 'SolitaireLegend',
+    title: 'Solitaire Legend',
+    description: 'Your task is to move all cards from the tableau to the four foundation piles, sorted by suit and rank in ascending order from Ace to King',
+    category: 'cards',
+    imageUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/SolitaireLegendTeaser.jpg?v=0.2-e9a56fac',
+    gameUrl: 'https://play.famobi.com/solitaire-legend/A1000-10',
     featured: false
   }
 ];
