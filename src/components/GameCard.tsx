@@ -1,35 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Game } from '../types';
-import { Play } from 'lucide-react';
 
 interface GameCardProps {
   game: Game;
 }
 
 export function GameCard({ game }: GameCardProps) {
+  const location = useLocation();
+  
+  // 从当前 URL 中提取类目
+  const getCurrentCategory = () => {
+    const path = location.pathname;
+    if (path === '/') return 'all';
+    const match = path.match(/\/category\/(.+)/);
+    return match ? match[1] : 'all';
+  };
+
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden transition-transform hover:scale-105">
-      <div className="relative aspect-video">
+    <Link 
+      to={`/play/${game.id}`} 
+      state={{ fromCategory: getCurrentCategory() }}
+      className="block bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+    >
+      <div className="aspect-video relative">
         <img
           src={game.imageUrl}
           alt={game.title}
           className="w-full h-full object-cover"
         />
-        <Link
-          to={`/play/${game.id}`}
-          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity"
-        >
-          <button className="bg-purple-500 text-white px-6 py-2 rounded-full flex items-center space-x-2">
-            <Play className="w-5 h-5" />
-            <span>Play Now</span>
-          </button>
-        </Link>
+        {game.featured && (
+          <span className="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded">
+            Featured
+          </span>
+        )}
       </div>
       <div className="p-4">
-        <h3 className="text-xl font-bold text-white mb-2">{game.title}</h3>
-        <p className="text-gray-400 text-sm">{game.description}</p>
+        <h3 className="text-lg font-bold text-white">{game.title}</h3>
+        <p className="text-gray-400 text-sm mt-1">{game.description}</p>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -1,16 +1,50 @@
-import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { games } from '../data/games';
+import { Game } from '../types';
 import { ArrowLeft, Maximize2, Minimize2 } from 'lucide-react';
 import { GameIframeLoader } from '../components/GameIframeLoader';
 
-function GamePlayer() {
+export default function GamePlayer() {
   const { gameId } = useParams<{ gameId: string }>();
-  const game = games.find(g => g.id === gameId);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [game, setGame] = useState<Game | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
+  // 从 location.state 中获取来源类目，或者从 URL 中解析
+  const getReturnPath = () => {
+    // 如果 location.state 中有 fromCategory，使用它
+    if (location.state && location.state.fromCategory) {
+      return location.state.fromCategory === 'all' 
+        ? '/' 
+        : `/category/${location.state.fromCategory}`;
+    }
+    
+    // 否则尝试从 URL 中解析（如果用户直接访问游戏页面）
+    const foundGame = games.find(g => g.id === gameId);
+    if (foundGame) {
+      return foundGame.category === 'all' 
+        ? '/' 
+        : `/category/${foundGame.category}`;
+    }
+    
+    // 默认返回首页
+    return '/';
+  };
+
+  useEffect(() => {
+    const foundGame = games.find(g => g.id === gameId);
+    if (foundGame) {
+      setGame(foundGame);
+      document.title = `${foundGame.title} - YourGame`;
+    } else {
+      navigate('/');
+    }
+  }, [gameId, navigate]);
+
   if (!game) {
-    return <div className="text-white">Game not found</div>;
+    return <div className="text-white">Loading...</div>;
   }
 
   const toggleFullscreen = () => {
@@ -32,13 +66,13 @@ function GamePlayer() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
-        <Link
-          to="/"
+        <button
+          onClick={() => navigate(getReturnPath())}
           className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Games</span>
-        </Link>
+        </button>
         <h1 className="text-2xl font-bold text-white order-first sm:order-none">{game.title}</h1>
         <button
           onClick={toggleFullscreen}
@@ -66,5 +100,3 @@ function GamePlayer() {
     </div>
   );
 }
-
-export default GamePlayer;
